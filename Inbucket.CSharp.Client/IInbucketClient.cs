@@ -21,7 +21,9 @@ namespace Inbucket.CSharp.Client
         string GetMailBoxFromEmail(string email, bool setMailBox = true);
 
         /// <summary>
-        /// Get or Set the object property {CurrentMailBox} and returns it.
+        /// Get or Set the object {CurrentMailBox} property and returns it.
+        /// <para>If you specify the MailBox, the method will set the object {CurrentMailBox} property and return the values.
+        /// If nothing specifid, the method will simply return the current MailBox value.</para>
         /// </summary>
         /// <param name="mailbox">The desired MailBox.</param>
         /// <returns>The object current mailbox.</returns>

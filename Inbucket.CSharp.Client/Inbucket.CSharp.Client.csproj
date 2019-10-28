@@ -3,13 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <LangVersion>latest</LangVersion>
+    <ApplicationIcon>inbucket.ico</ApplicationIcon>
+    <Authors>Youssef Ben</Authors>
+    <Product>Inbucket CSharp Client</Product>
+    <Description>CSharp (.NET Core) client for the Inbucket API.
+
+Inbucket is an email testing service, it will accept messages for any email address and make them available via web, REST and POP3. Read more at the Inbucket Website : https://www.inbucket.org/.</Description>
+    <PackageProjectUrl>https://www.inbucket.org/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Youssef-ben/inbucket-csharp-client</RepositoryUrl>
+    <PackageTags>.NetCore; CSharp; C#; Inbucket Client</PackageTags>
+    <PackageReleaseNotes>Initial package.</PackageReleaseNotes>
+    <PackageIconUrl>https://github.com/Youssef-ben/inbucket-csharp-client/blob/develop/inbucket.ico</PackageIconUrl>
+    <Copyright>MIT</Copyright>
+    <NeutralLanguage />
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='$(Configuration)|AnyCPU'">
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
   
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='$(Configuration)|AnyCPU'">
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
