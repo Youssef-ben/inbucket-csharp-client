@@ -12,9 +12,13 @@
         private const string V1_MESSAGE_SOURCE_ENDPOINT = "/api/v1/mailbox/{0}/{1}/source";
         private const string V1_MAILBOX_ENDPOINT = "/api/v1/mailbox/{0}";
 
-        public readonly HttpClient Client;
+        public HttpClient Client { get; set; }
 
         private string CurrentMailBox { get; set; }
+
+        public InbucketClient()
+        {
+        }
 
         public InbucketClient(Uri inbucketUri, string mailbox = default)
         {
@@ -47,7 +51,7 @@
 
         public string GetMailBoxFromEmail(string email, bool setMailBox = true)
         {
-            if (InbucketExtensions.IsValidEmail(email))
+            if (!InbucketExtensions.IsValidEmail(email))
             {
                 throw new FormatException("Invalid email address.");
             }
@@ -81,7 +85,7 @@
             return await this.GetAsync<InbucketMessage>(endpoint);
         }
 
-        public async Task<InbucketMessageSource> GetMessageSource(string id, string mailbox = default)
+        public async Task<InbucketMessageSource> GetMessageSourceAsync(string id, string mailbox = default)
         {
             mailbox = this.MailBox(mailbox);
 
@@ -90,13 +94,13 @@
             return await this.GetAsync<InbucketMessageSource>(endpoint);
         }
 
-        public async Task<List<InbucketMessageDetails>> GetMailBoxMessages(string mailbox = null)
+        public async Task<List<InbucketMessageHeader>> GetMailBoxMessagesAsync(string mailbox = null)
         {
             mailbox = this.MailBox(mailbox);
 
             var endpoint = string.Format(V1_MAILBOX_ENDPOINT, mailbox);
 
-            return await this.GetAsync<List<InbucketMessageDetails>>(endpoint);
+            return await this.GetAsync<List<InbucketMessageHeader>>(endpoint);
         }
 
         public async Task<bool> DeleteMessageAsync(string id, string mailbox = null)
@@ -108,7 +112,7 @@
             return await this.DeleteAsync(endpoint);
         }
 
-        public async Task<bool> PurgeMailBox(string mailbox = null)
+        public async Task<bool> PurgeMailBoxAsync(string mailbox = null)
         {
             mailbox = this.MailBox(mailbox);
 

@@ -2,6 +2,18 @@ language: csharp
 mono: none
 dotnet: 2.2.202
 solution: Inbucket.CSharp.Client.sln
-script:
-  - dotnet restore
-  - dotnet build
+
+stages:
+  - build
+  - test
+
+jobs:
+  include:
+    - script: echo "Runinng build stage..."
+    - stage: build
+      script: 
+        - dotnet build
+    - script: echo "Runinng test stage..."
+    - stage: test
+      script: 
+        - dotnet test -v n Inbucket.CSharp.Client.Test/Inbucket.CSharp.Client.Test.csproj

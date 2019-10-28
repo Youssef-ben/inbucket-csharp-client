@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class InbucketMessage : InbucketMessageDetails
+    public class InbucketMessage : InbucketMessageHeader
     {
         public InbucketBody Body { get; set; }
 

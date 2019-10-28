@@ -21,7 +21,6 @@
         /// Checks if the specified string is a valid Email address.
         /// source: https://docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format
         /// </summary>
-        /// <param name="self">The the Inbucket Client class.</param>
         /// <param name="email">The email to be validated.</param>
         /// <returns>True if the email is valid. False otherwise.</returns>
         internal static bool IsValidEmail(string email)

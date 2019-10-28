@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
 
-    public class InbucketMessageDetails
+    public class InbucketMessageHeader
     {
         public string Mailbox { get; set; }
 
