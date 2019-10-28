@@ -9,11 +9,9 @@ stages:
 
 jobs:
   include:
-    - script: echo "Runinng build stage..."
     - stage: build
       script: 
         - dotnet build
-    - script: echo "Runinng test stage..."
     - stage: test
       script: 
         - dotnet test -v n Inbucket.CSharp.Client.Test/Inbucket.CSharp.Client.Test.csproj
