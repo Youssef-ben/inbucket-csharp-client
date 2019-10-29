@@ -1,0 +1,17 @@
+language: csharp
+mono: none
+dotnet: 2.2.202
+solution: Inbucket.CSharp.Client.sln
+
+stages:
+  - build
+  - test
+
+jobs:
+  include:
+    - stage: build
+      script: 
+        - dotnet build
+    - stage: test
+      script: 
+        - dotnet test -v n Inbucket.CSharp.Client.Test/Inbucket.CSharp.Client.Test.csproj
