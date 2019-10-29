@@ -7,13 +7,14 @@
     <Authors>Youssef Ben</Authors>
     <Product>Inbucket CSharp Client</Product>
     <Description>CSharp (.NET Core) client for the Inbucket API.
-
-Inbucket is an email testing service, it will accept messages for any email address and make them available via web, REST and POP3. Read more at the Inbucket Website : https://www.inbucket.org/.</Description>
+    Inbucket is an email testing service, it will accept messages for any email address and make them available via web, REST and POP3. Read more at the Inbucket Website : https://www.inbucket.org/.
+    </Description>
     <PackageProjectUrl>https://www.inbucket.org/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Youssef-ben/inbucket-csharp-client</RepositoryUrl>
     <PackageTags>.NetCore; CSharp; C#; Inbucket Client</PackageTags>
     <PackageReleaseNotes>Initial package.</PackageReleaseNotes>
     <PackageIconUrl>https://github.com/Youssef-ben/inbucket-csharp-client/blob/develop/inbucket.ico</PackageIconUrl>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
     <Copyright>MIT</Copyright>
     <NeutralLanguage />
   </PropertyGroup>
@@ -29,6 +30,11 @@ Inbucket is an email testing service, it will accept messages for any email addr
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="../LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Include="../README.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
   </ItemGroup>
 
 </Project>
