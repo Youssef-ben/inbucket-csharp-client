@@ -11,13 +11,13 @@
     </Description>
     <PackageProjectUrl>https://github.com/Youssef-ben/inbucket-csharp-client</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Youssef-ben/inbucket-csharp-client#readme</RepositoryUrl>
-    <PackageTags>.NetCore; CSharp; C#; Inbucket Client; Inbucket; dotnet core; Inbucket csahrp; Inbucket C#</PackageTags>
-    <PackageReleaseNotes>WIP: Converted the librar to net standard.</PackageReleaseNotes>
+    <PackageTags>.NetCore; CSharp; C#; Inbucket Client; Inbucket; dotnet core; Inbucket csharp; Inbucket C#; Inbucket CSharp client</PackageTags>
+    <PackageReleaseNotes>Updated the package description to fix a bug when trying to install or restore the library.</PackageReleaseNotes>
     <icon>inbucket.ico</icon>
-    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>MIT</Copyright>
-    <PackageReleaseNotes>v1.1.0</PackageReleaseNotes>
-    <Version>1.1.0</Version>
+    <PackageReleaseNotes>v1.1.1</PackageReleaseNotes>
+    <Version>1.1.1</Version>
     <RepositoryType>Library</RepositoryType>
     <NeutralLanguage />
   </PropertyGroup>
@@ -33,9 +33,8 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Include="../LICENSE.txt" Pack="true" PackagePath="$(PackageLicenseFile)" />
-    <None Include="../README.md" Pack="true" PackagePath="$(PackageLicenseFile)" />
-    <None Include="../inbucket.ico" Pack="true" PackagePath="$(PackageLicenseFile)" />
+    <None Include="../README.md" Pack="true" PackagePath="\" />
+    <None Include="../inbucket.ico" Pack="true" PackagePath="\" />
   </ItemGroup>
 
 </Project>
